@@ -13,7 +13,7 @@ variable "tenant_id"{
 }
 variable "prefix"{
  type=string
- default="mcit"
+ default="salomonlubin"
 }
 variable "account_tier"{
   type=string
