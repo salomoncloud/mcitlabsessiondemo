@@ -1,15 +1,17 @@
 locals {
-servicename="abracadabra"
-forum="abracadabramcit"
+name="salomon"
+lastname="lubin"
+city="514"
 
-lengthsa=length(local.servicename)
-length=length(local.forum)
+lengthsa=length(local.name)
+length=length(local.lastname)
+length=length(local.city)
 }
 output "print" {
-value = local.servicename
+value = local.name
 }
 output "secondprint" {
-value = local.forum
+value = local.lastname
 }
 output "lengthsa" {
 value = local.lengthsa
