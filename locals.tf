@@ -14,6 +14,3 @@ value = local.forum
 output "lengthsa" {
 value = local.lengthsa
 }
-output "lengthforum" {
-value = local.lengthforum
-}
