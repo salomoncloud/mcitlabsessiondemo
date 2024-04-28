@@ -15,5 +15,5 @@ output "lengthsa" {
 value = local.lengthsa
 }
 output "lengthforum" {
-value = local.lengthforum
+value = local.length.forum
 }
