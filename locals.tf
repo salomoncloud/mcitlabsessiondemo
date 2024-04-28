@@ -5,7 +5,6 @@ city="514"
 
 lengthsa=length(local.name)
 length=length(local.lastname)
-length=length(local.city)
 }
 output "print" {
 value = local.name
@@ -15,4 +14,7 @@ value = local.lastname
 }
 output "lengthsa" {
 value = local.lengthsa
+}
+output "length" {
+value = local.length
 }
