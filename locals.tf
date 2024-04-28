@@ -1,7 +1,7 @@
 locals {
 name="salomon"
 lastname="lubin"
-city="514"
+city="montreal"
 
 lengthsa=length(local.name)
 length=length(local.lastname)
@@ -11,6 +11,9 @@ value = local.name
 }
 output "secondprint" {
 value = local.lastname
+}
+output "printcity" {
+value = local.city
 }
 output "lengthsa" {
 value = local.lengthsa
