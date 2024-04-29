@@ -38,15 +38,3 @@ value = local.lengthcity
 output "lengthbell" {
 value = local.landmark
 }
-output "lengthforum" {
-value = local.landmark2
-}
-output "lengthpont" {
-value = local.landmark3
-}
-output "lengthhd" {
-value = local.landmark4
-}
-output "lengthmcit" {
-value = local.landmark5
-}
