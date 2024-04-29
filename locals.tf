@@ -50,3 +50,12 @@ value = local.landmark4
 output "lengthmaplesyrup" {
 value = local.landmark5
 }
+output "company_name_output"{
+value=var.company_name
+}
+output "years_of_establishment_output"{
+value=var.years_of_establishment
+}
+output "ifelsecheck_output"{
+value=var.ifelsecheck
+}
