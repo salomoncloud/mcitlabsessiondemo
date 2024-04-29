@@ -51,14 +51,14 @@ output "lengthbell" {
 value = local.landmark
 }
 output "lengthforum" {
-value = local.landmark2
+value = local.forum
 }
 output "lengthpont" {
-value = local.landmark3
+value = local.pont
 }
 output "lengthhd" {
-value = local.landmark4
+value = local.hd
 }
 output "lengthmcit" {
-value = local.landmark5
+value = local.mcit
 }
