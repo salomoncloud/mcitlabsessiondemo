@@ -26,6 +26,18 @@ value = local.lastname
 output "printcity" {
 value = local.city
 }
+output "printlandmark2" {
+value = local.landmark2
+}
+output "printlandmark3" {
+value = local.landmark3
+}
+output "printlandmark4" {
+value = local.landmark4
+}
+output "printlandmark5" {
+value = local.landmark5
+}
 output "lengthsa" {
 value = local.lengthsa
 }
@@ -37,4 +49,16 @@ value = local.lengthcity
 }
 output "lengthbell" {
 value = local.landmark
+}
+output "lengthforum" {
+value = local.landmark2
+}
+output "lengthpont" {
+value = local.landmark3
+}
+output "lengthhd" {
+value = local.landmark4
+}
+output "lengthmcit" {
+value = local.landmark5
 }
