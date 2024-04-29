@@ -2,16 +2,16 @@ variable "subscription_id"{
   type=string
 }
 variable "company_name"{
-type=string
-default="Montreal College Information Technology"
+  type=string
+  default="Montreal College Information Technology"
 }
 variable "years_of_establishment"{
-type=number
-default=15
+  type=number
+  default=15
 }
 variable "ifelsecheck"{
-type=bool
-default=true
+  type=bool
+  default=true
 }
 variable "client_id"{
   type=string
