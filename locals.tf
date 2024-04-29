@@ -4,12 +4,18 @@ lastname="lubin"
 city="montreal"
 landmark="BellCenter"
 landmark2="Forum"
+landmark3="poutine"
+landmark4="justepourrire"
+landmark5="maplesyrup"
 
 lengthsa=length(local.name)
 length=length(local.lastname)
 lengthcity=length(local.city)
 lengthbell=length(local.landmark)
 lengthforum=length(local.landmark2)
+lengthpoutine=length(local.landmark3)
+lengthjustepourrire=length(local.landmark4)
+lengthmaplesyrup=length(local.landmark5)
 }
 output "print" {
 value = local.name
@@ -34,4 +40,13 @@ value = local.landmark
 }
 output "lengthforum" {
 value = local.landmark2
+}
+output "lengthpoutine" {
+value = local.landmark3
+}
+output "lengthjustepourrire" {
+value = local.landmark4
+}
+output "lengthmaplesyrup" {
+value = local.landmark5
 }
