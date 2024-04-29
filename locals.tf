@@ -7,6 +7,8 @@ landmark2="Forum"
 landmark3="poutine"
 landmark4="justepourrire"
 landmark5="maplesyrup"
+winterListOfSports=["hockey", "Skiing", "figure skating"]
+
 
 lengthsa=length(local.name)
 length=length(local.lastname)
@@ -16,6 +18,9 @@ lengthforum=length(local.landmark2)
 lengthpoutine=length(local.landmark3)
 lengthjustepourrire=length(local.landmark4)
 lengthmaplesyrup=length(local.landmark5)
+}
+output "wintersportslist"{
+    value=[for sport in local.winterListOfSports:sport]
 }
 output "print" {
 value = local.name
