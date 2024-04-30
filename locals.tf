@@ -11,6 +11,7 @@ winterListOfSports=["hockey", "Skiing", "figure skating"]
 universityListOfSchools=["Mcgill", "Concordia", "ETS"]
 montrealListOfRestaurants=["Baroco", "Petes Smoke Meat", "Joe Beef", "Chez Ma Tante", "Taco Trunp"]
 total_output = ["150", "150", "150"]
+listOfNumbers=["4"," 5", "1", "2", "3", "4", "5"]
 
 lengthsa=length(local.name)
 length=length(local.lastname)
@@ -20,6 +21,9 @@ lengthforum=length(local.landmark2)
 lengthpoutine=length(local.landmark3)
 lengthjustepourrire=length(local.landmark4)
 lengthmaplesyrup=length(local.landmark5)
+}
+output "sumoflistofnumbers"{
+value=sum([for numberoutput in local.listOfNumbers: tonumber(numberoutput)])
 }
 output "sumofthreenumbers"{
 value=sum([for numberoutput in local.total_output: tonumber(numberoutput)])
