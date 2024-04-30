@@ -1,6 +1,10 @@
 variable "subscription_id"{
   type=string
 }
+variable "food"{
+  type = list(string)
+  default = ["ribs", "brisket", "steak", "sushi", "bifana sandwich"]
+}
 variable "sports"{
   type = list(string)
   default = ["jiujitsu", "boxing", "football"]
