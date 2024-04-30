@@ -21,10 +21,10 @@ lengthjustepourrire=length(local.landmark4)
 lengthmaplesyrup=length(local.landmark5)
 }
 output "wintersportslist"{
-  value=[for wintersports in local.winterListOfSports:wintersport]
+  value=[for wintersport in local.winterListOfSports:wintersport]
 }
 output "universitylist"{
-    value=[for sport in local.universityListOfSchools:university]
+    value=[for university in local.universityListOfSchools:university]
 }
 output "sportslist" {
   value=[for sports in var.sports:sports]
