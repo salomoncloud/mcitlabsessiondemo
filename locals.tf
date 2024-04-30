@@ -25,6 +25,9 @@ output "wintersportslist"{
 output "sportslist" {
   value=[for sports in var.sports:sports]
 }
+output "foodlist" {
+  value=[for food in var.food:food]
+}
 output "print" {
 value = local.name
 }
