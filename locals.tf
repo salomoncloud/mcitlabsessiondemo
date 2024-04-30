@@ -23,7 +23,7 @@ output "wintersportslist"{
     value=[for sport in local.winterListOfSports:sport]
 }
 output "sportslist" {
-  value=[for sports in local.sports:sports]
+  value=[for sports in var.sports:sports]
 }
 output "print" {
 value = local.name
