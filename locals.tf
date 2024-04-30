@@ -11,7 +11,7 @@ winterListOfSports=["hockey", "Skiing", "figure skating"]
 universityListOfSchools=["Mcgill", "Concordia", "ETS"]
 montrealListOfRestaurants=["Baroco", "Petes Smoke Meat", "Joe Beef", "Chez Ma Tante", "Taco Trunp"]
 total_output = ["150", "150", "150"]
-listOfNumbers=["4"," 5", "1", "2", "3", "4", "5"]
+listOfNumbers=["4", "5", "1", "2", "3", "4", "5"]
 
 lengthsa=length(local.name)
 length=length(local.lastname)
