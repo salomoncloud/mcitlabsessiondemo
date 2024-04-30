@@ -9,7 +9,7 @@ landmark4="justepourrire"
 landmark5="maplesyrup"
 winterListOfSports=["hockey", "Skiing", "figure skating"]
 universityListOfSchools=["Mcgill", "Concordia", "ETS"]
-montrealListOfRestaurants=["Baroco", "Petes Smoke Meat", "Joe Beef"]
+montrealListOfRestaurants=["Baroco", "Petes Smoke Meat", "Joe Beef", "Chez Ma Tante", "Taco Trunp"]
 
 lengthsa=length(local.name)
 length=length(local.lastname)
