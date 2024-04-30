@@ -24,7 +24,7 @@ output "wintersportslist"{
   value=[for wintersports in local.winterListOfSports:wintersport]
 }
 output "universitylist"{
-    value=[for sport in local.universityListOfSchools:schools]
+    value=[for sport in local.universityListOfSchools:university]
 }
 output "sportslist" {
   value=[for sports in var.sports:sports]
