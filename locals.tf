@@ -8,7 +8,7 @@ landmark3="poutine"
 landmark4="justepourrire"
 landmark5="maplesyrup"
 winterListOfSports=["hockey", "Skiing", "figure skating"]
-
+universityListOfSchools=["Mcgill", "Concordia", "ETS"]
 
 lengthsa=length(local.name)
 length=length(local.lastname)
@@ -20,7 +20,10 @@ lengthjustepourrire=length(local.landmark4)
 lengthmaplesyrup=length(local.landmark5)
 }
 output "wintersportslist"{
-    value=[for sport in local.winterListOfSports:sport]
+  value=[for wintersports in local.winterListOfSports:sport]
+}
+output "universitylist"{
+    value=[for sport in local.universityListOfSchools:schools]
 }
 output "sportslist" {
   value=[for sports in var.sports:sports]
