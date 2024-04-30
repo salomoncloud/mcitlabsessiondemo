@@ -1,6 +1,10 @@
 variable "subscription_id"{
   type=string
 }
+variable "sports"{
+  type = list(string)
+  default = ["jiujitsu", "boxing", "football"]
+}
 variable "company_name"{
   type=string
   default="Montreal College Information Technology"
