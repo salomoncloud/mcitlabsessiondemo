@@ -9,7 +9,7 @@ landmark4="justepourrire"
 landmark5="maplesyrup"
 winterListOfSports=["hockey", "Skiing", "figure skating"]
 universityListOfSchools=["Mcgill", "Concordia", "ETS"]
-
+montrealListOfRestaurants=["Baroco", "Petes Smoke Meat", "Joe Beef"]
 
 lengthsa=length(local.name)
 length=length(local.lastname)
@@ -19,6 +19,9 @@ lengthforum=length(local.landmark2)
 lengthpoutine=length(local.landmark3)
 lengthjustepourrire=length(local.landmark4)
 lengthmaplesyrup=length(local.landmark5)
+}
+output "Restaurantlist"{
+  value=[for Resto in local.montrealListOfRestaurants:Resto]
 }
 output "wintersportslist"{
   value=[for wintersport in local.winterListOfSports:wintersport]
