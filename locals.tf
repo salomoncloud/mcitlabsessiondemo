@@ -10,7 +10,7 @@ landmark5="maplesyrup"
 winterListOfSports=["hockey", "Skiing", "figure skating"]
 universityListOfSchools=["Mcgill", "Concordia", "ETS"]
 montrealListOfRestaurants=["Baroco", "Petes Smoke Meat", "Joe Beef", "Chez Ma Tante", "Taco Trunp"]
-total_output = ["347", "55", "111"]
+total_output = ["150", "150", "150"]
 
 lengthsa=length(local.name)
 length=length(local.lastname)
