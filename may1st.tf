@@ -1,6 +1,6 @@
 //==================================================1st May 2024=========================================//
 variable "original_string" {
-  default = "Montreal College Information Technology"
+  default = "Salomon Lubin"
 }
 
 # Function 1: Length of the string
@@ -48,7 +48,7 @@ variable "string_list" {
 }
 
 output "join_example" {
-  value = join(" ", var.string_list)
+  value = join(".", var.string_list)
 }
 
 # Function 9: Trim leading and trailing whitespace
