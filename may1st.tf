@@ -25,7 +25,7 @@ output "replaced_string" {
 
 # Function 5: Concatenate with another string
 variable "additional_string" {
-  default = " from Terraform"
+  default = " from The West Island"
 }
 
 output "concatenated_string" {
@@ -34,7 +34,7 @@ output "concatenated_string" {
 
 # Function 6: Substring - Extract "World" from the string
 output "substring_example" {
-  value = substr(var.original_string, 0, 2)
+  value = substr(var.original_string, 0, 7)
 }
 
 # Function 7: Split the string by space into a list
