@@ -1,4 +1,5 @@
 locals {
+test="test-one-two"
 name="salomon"
 lastname="lubin"
 city="montreal"
@@ -13,6 +14,7 @@ montrealListOfRestaurants=["Baroco", "Petes Smoke Meat", "Joe Beef", "Chez Ma Ta
 total_output = ["150", "150", "150"]
 listOfNumbers=["4", "5", "1", "2", "3", "4", "5"]
 
+lengthtest=length(local.test)
 lengthsa=length(local.name)
 length=length(local.lastname)
 lengthcity=length(local.city)
@@ -42,6 +44,9 @@ output "sportslist" {
 }
 output "foodlist" {
   value=[for food in var.food:food]
+}
+output "test" {
+value = local.test
 }
 output "print" {
 value = local.name
