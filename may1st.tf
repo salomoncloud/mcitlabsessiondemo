@@ -34,7 +34,7 @@ output "concatenated_string" {
 
 # Function 6: Substring - Extract "World" from the string
 output "substring_example" {
-  value = substr(var.original_string, 6, -1)
+  value = substr(var.original_string, 0, 2)
 }
 
 # Function 7: Split the string by space into a list
