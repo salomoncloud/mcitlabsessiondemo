@@ -57,6 +57,9 @@ value = local.lastname
 output "printcity" {
 value = local.city
 }
+output "lengthtest" {
+value = local.test
+}
 output "lengthsa" {
 value = local.lengthsa
 }
