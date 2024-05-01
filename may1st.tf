@@ -69,6 +69,12 @@ locals {
   contains_keyword = contains(split(" ", var.original_string), "Montreal")
 }
 
+> reverse([1, 2, 3])
+[
+  3,
+  2,
+  1,
+]
 
 output "string_contains_no_sample" {
   value = local.contains_keyword ? "String contains 'Mcit'" : "String does not contain 'Mcit'"
