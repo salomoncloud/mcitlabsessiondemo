@@ -45,7 +45,7 @@ output "sportslist" {
 output "foodlist" {
   value=[for food in var.food:food]
 }
-output "test" {
+output "printtest" {
 value = local.test
 }
 output "print" {
