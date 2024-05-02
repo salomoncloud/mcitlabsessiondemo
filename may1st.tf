@@ -75,7 +75,7 @@ output "reverse_example" {
 }
 
 locals {
-  contains_keyword = contains(split(" ", var.original_string), "Salomon")
+  contains_keyword = contains(split("Salomon", var.original_string), "Salomon")
 }
 
 output "contains_keyword_output" {
