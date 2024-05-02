@@ -1,16 +1,4 @@
 //==================================================1st May 2024=========================================//
-output "split_of_reverse" {
-value = reverse (split(var.reverse_number_list))
-}
-
-variable "reverse_number_list" {
-> reverse([1, 2, 3])
-[
-  3,
-  2,
-  1,
-]
-}
 variable "original_string" {
   default = "Salomon Lubin"
 }
