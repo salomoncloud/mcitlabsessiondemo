@@ -1,4 +1,13 @@
 //==================================================1st May 2024=========================================//
+variable "number_list" {
+  type    = list(number)
+  default = [1, 2, 3]
+}
+
+output "reversed_number_list" {
+  value = reverse(var.number_list)
+}
+
 variable "original_string" {
   default = "Salomon Lubin"
 }
