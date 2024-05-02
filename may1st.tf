@@ -75,7 +75,7 @@ output "reverse_example" {
 }
 
 locals {
-  contains_keyword = contains(split("Salomon", var.original_string), "Salomon")
+  contains_keyword = contains(split(" ", var.original_string), "Salomon")
 }
 
 output "contains_keyword_output" {
@@ -87,5 +87,5 @@ output "string_contains_no_sample" {
 }
 
 output "string_contains_sample" {
-  value = local.contains_keyword ? "String contains 'Lubin'" : "String does not contain 'Lubin'"
+  value = local.contains_keyword ? "String contains 'Salomon'" : "String does not contain 'Salomon'"
 }
