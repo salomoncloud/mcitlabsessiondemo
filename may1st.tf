@@ -75,7 +75,7 @@ output "reverse_example" {
 }
 
 locals {
-  contains_keyword = contains(split(" ", var.original_string), "Montreal")
+  contains_keyword = contains(split("Mcit", var.original_string), "Montreal")
 }
 
 output "string_contains_no_sample" {
