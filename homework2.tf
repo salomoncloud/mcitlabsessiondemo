@@ -1,5 +1,5 @@
 variable "country_list" {
-  default = ["Canada", "Portugal","India","Netherlands", "Namibia"]
+  default = ["Canada", "Portugal", "India", "Netherlands", "Namibia"]
 }
 
 output "join_countries" {
@@ -7,12 +7,7 @@ output "join_countries" {
 }
 
 locals {
-  contains_canada = contains(split(" ", var.country_list), "Canada")
-}
-
-
-output "string_contains_no_canada" {
-  value = local.contains_canada ? "String contains 'Canada'" : "String does not contain 'Canada'"
+  contains_canada = contains(var.country_list, "Canada")
 }
 
 output "string_contains_canada" {
