@@ -15,15 +15,15 @@ output "string_contains_canada" {
 }
 
 variable "love_string" {
-  default = "I love"
+  default = "I love "
 }
 
 variable "canada_string" {
-  default = " Canada "
+  default = "Canada "
 }
 
 output "trim_canada" {
-  value = trim(var.canada_string," ")
+  value = trim(var.canada_string,"  ")
 }
 
 output "concatenat_canada" {
