@@ -4,6 +4,3 @@ variable "country_list" {
 output "join_countries" {
   value = join("+", var.country_list)
 }
-locals {
-  contains_keyword = contains(split(" ", var.country_list), "Canada")
-}
