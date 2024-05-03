@@ -21,3 +21,9 @@ variable "love_string" {
 variable "canada_string" {
   default = "Canada "
 }
+
+output "trim_canada" {
+  value = trim(var.canada_string," ")
+}
+
+
