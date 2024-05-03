@@ -7,14 +7,14 @@ output "join_countries" {
 }
 
 locals {
-  contains_keyword = contains(split(" ", var.country_list), "Canada")
+  contains_canada = contains(split(" ", var.country_list), "Canada")
 }
 
 
 output "string_contains_no_canada" {
-  value = local.contains_keyword ? "String contains 'Canada'" : "String does not contain 'Canada'"
+  value = local.contains_canada ? "String contains 'Canada'" : "String does not contain 'Canada'"
 }
 
 output "string_contains_canada" {
-  value = local.contains_keyword ? "String contains 'Canada'" : "String does not contain 'Canada'"
+  value = local.contains_canada ? "String contains 'Canada'" : "String does not contain 'Canada'"
 }
