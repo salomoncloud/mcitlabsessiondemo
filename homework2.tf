@@ -19,7 +19,7 @@ variable "love_string" {
 }
 
 variable "canada_string" {
-  default = "Canada "
+  default = " Canada "
 }
 
 output "trim_canada" {
