@@ -30,10 +30,10 @@ output "concatenat_canada" {
   value = trim("${var.love_string}${var.canada_string}", " ")
 }
 
-variable "upper_string" {
-  default = "upper"
+variable "upperlow_string" {
+  default = "upperLOWER"
 }
 
-variable "LOWER_string" {
-  default = "LOWER"
+output "UPPERlower_string" {
+  value = replace(var.upperlow_string, "upperLOWER", "UPPERlower")
 }
