@@ -13,3 +13,11 @@ locals {
 output "string_contains_canada" {
   value = local.contains_canada ? "String contains 'Canada'" : "String does not contain 'Canada'"
 }
+
+variable "love_string" {
+  default = "I love"
+}
+
+variable "canada_string" {
+  default = "Canada "
+}
