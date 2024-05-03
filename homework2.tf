@@ -1,9 +1,9 @@
-variable "string_list" {
+variable "country_list" {
   default = ["Canada", "Portugal","India","Netherlands", "Namibia"]
 }
-output "join_example" {
-  value = join("+", var.string_list)
+output "join_countries" {
+  value = join("+", var.country_list)
 }
 locals {
-  contains_keyword = contains(split(" ", var.original_string), "Canada")
+  contains_keyword = contains(split(" ", var.country_list), "Canada")
 }
