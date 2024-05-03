@@ -29,3 +29,15 @@ output "trim_canada" {
 output "concatenat_canada" {
   value = trim("${var.love_string}${var.canada_string}", " ")
 }
+
+variable "upper_string" {
+  default = "upper"
+}
+
+variable "LOWER_string" {
+  default = "LOWER"
+}
+
+output "concatenated_upperlower_string" {
+  value = "${var.upper_string}${var.LOWER_string}"
+}
