@@ -37,7 +37,3 @@ variable "upper_string" {
 variable "LOWER_string" {
   default = "LOWER"
 }
-
-output "concatenated_upperlower_string" {
-  value = "${var.upper_string}${var.LOWER_string}"
-}
