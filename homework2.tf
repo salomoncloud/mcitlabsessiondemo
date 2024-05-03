@@ -26,4 +26,6 @@ output "trim_canada" {
   value = trim(var.canada_string," ")
 }
 
-
+output "concatenat_canada" {
+  value = "${var.love_string}${var.canada_string}"
+}
