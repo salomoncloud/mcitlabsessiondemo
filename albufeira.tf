@@ -14,6 +14,14 @@ variable "total_output"{
 type = list(string)
 default = ["150", "150", "150"]
 }
+variable "leaders_map" {
+  type    = map(map(string))
+  default = {
+    US = {"name" = "Obama"}
+    CAD = {"name" = "Trudeau"}
+    FRA = {"name" = "Macron"}
+  }
+}
 locals{
   number_output = ["724", "238", "219", "291", "555"]
   world_leaders = ["Obama", "Trudeau", "Macron"]
@@ -63,4 +71,7 @@ output "sumoffivenumbers"{
 }
 output "world_countries_associated"{
 value = local.world_countries_associated
+}
+output "leaders_map"{
+value = var.leaders_map
 }
