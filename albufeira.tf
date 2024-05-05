@@ -10,6 +10,10 @@ variable "nested_map" {
     group3 = {"name" = "Charlie", "age" = "35"}
   }
 }
+variable "total_output"{
+type = list(string)
+default = ["150", "150", "150"]
+}
 locals{
   characters = ["luke", "yoda", "darth"]
   enemies_destroyed = [4252, 900, 20000056894]
