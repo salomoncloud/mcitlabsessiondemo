@@ -2,6 +2,7 @@ variable "simple_nested_list" {
   type    = list(list(string))
   default = [["a", "b"], ["c", "d"], ["e", "f"]]
 }
+
 variable "nested_map" {
   type    = map(map(string))
   default = {
@@ -10,30 +11,35 @@ variable "nested_map" {
     group3 = {"name" = "Charlie", "age" = "35"}
   }
 }
-variable "total_output"{
-type = list(string)
-default = ["150", "150", "150"]
+
+variable "total_output" {
+  type    = list(string)
+  default = ["150", "150", "150"]
 }
+
 variable "leaders_map" {
   type    = map(map(string))
   default = {
-    US = {"name" = "Obama"}
+    US  = {"name" = "Obama"}
     CAD = {"name" = "Trudeau"}
     FRA = {"name" = "Macron"}
   }
-variable "user_roles"{
-type = map(string)
-default = {
-sami = "team lead"
-regis = "architect"
-aldo = "engineer"
 }
+
+variable "user_roles" {
+  type    = map(string)
+  default = {
+    sami  = "team lead"
+    regis = "architect"
+    aldo  = "engineer"
+  }
 }
-variable "default_role"{
-type = string
-default = "guest"
+
+variable "default_role" {
+  type    = string
+  default = "guest"
 }
-}
+
 locals{
 user_role_lookup = {
 sami = lookup(var.user_roles, "sami", var.default_role)
