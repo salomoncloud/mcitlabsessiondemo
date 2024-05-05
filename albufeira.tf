@@ -15,6 +15,9 @@ type = list(string)
 default = ["150", "150", "150"]
 }
 locals{
+  incremented_output = [
+    for value in var.total_output : tostring(tonumber(value) + 10)
+  ]
   characters = ["luke", "yoda", "darth"]
   enemies_destroyed = [4252, 900, 20000056894]
   character_enemy_map =   { for index,character in local.characters: # Convert character list to a set
@@ -46,4 +49,7 @@ value = local.enemies_destroyed
 }
 output "character_enemy_map"{
 value = local.character_enemy_map
+}
+output "incremented_output_show" {
+  value=local.incremented_output
 }
