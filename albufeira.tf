@@ -23,5 +23,5 @@ output "unflattened_list"{
 value=var.simple_nested_list
 }
 output "flattened_nested_map"{
-value = flatten(var.nested_map)
+value = local.flattened_map
 }
