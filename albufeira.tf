@@ -7,6 +7,7 @@ variable "nested_map" {
   default = {
     group1 = {"name" = "Alice", "age" = "25"}
     group2 = {"name" = "Bob", "age" = "30"}
+    group3 = {"name" = "Charlie", "age" = "35"}
   }
 }
 locals{
