@@ -15,6 +15,7 @@ type = list(string)
 default = ["150", "150", "150"]
 }
 locals{
+number_output = ["724", "238", "219", "291", "555"]
   incremented_output = [
     for value in var.total_output : tostring(tonumber(value) + 10)
   ]
@@ -52,4 +53,7 @@ value = local.character_enemy_map
 }
 output "incremented_output_show" {
   value=local.incremented_output
+}
+output "sumoffivenumbers"{
+    value=sum([for numberoutput in local.number_output: tonumber(numberoutput)])
 }
