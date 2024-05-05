@@ -62,5 +62,5 @@ output "sumoffivenumbers"{
     value=sum([for numberoutput in local.number_output: tonumber(numberoutput)])
 }
 output "world_countries_associated"{
-value = local.world_leaders
+value = local.world_countries_associated
 }
