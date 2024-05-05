@@ -9,6 +9,6 @@ locals{
   sum_element1=20
   sum_element2=30
 }
-output "flattened_simple_list"{
-value=var.simple_nested_list
+output "list_flattened"{
+value = flatten(var.simple_nested_list)
 }
