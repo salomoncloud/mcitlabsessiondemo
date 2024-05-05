@@ -21,8 +21,25 @@ variable "leaders_map" {
     CAD = {"name" = "Trudeau"}
     FRA = {"name" = "Macron"}
   }
+variable "user_roles"{
+type = map(string)
+default = {
+sami = "team lead"
+regis = "architect"
+aldo = "engineer"
+}
+}
+variable "default_role"{
+type = string
+default = "guest"
+}
 }
 locals{
+user_role_lookup = {
+sami = lookup(var.user_roles, "sami", var.default_role)
+regis = lookup(var.user_roles, "regis", var.default_role)
+aldo = lookup(var.user_roles, "aldo", var.default_role)
+}
   number_output = ["724", "238", "219", "291", "555"]
   world_leaders = ["Obama", "Trudeau", "Macron"]
   world_countries = ["US", "CAD", "FRA"]
@@ -74,4 +91,7 @@ value = local.world_countries_associated
 }
 output "leaders_map"{
 value = var.leaders_map
+}
+output "user_roles_result" {
+value = local.user_role_lookup
 }
