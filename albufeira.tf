@@ -40,9 +40,6 @@ value = local.characters
 output "enemies_destroyed"{
 value = local.enemies_destroyed
 }
-output "enemies_destroyed"{
-value = local.enemies_destroyed
-}
 output "character_enemy_map"{
 output = local.character_enemy_map
 }
