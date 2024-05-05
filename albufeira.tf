@@ -25,3 +25,6 @@ value=var.simple_nested_list
 output "flattened_nested_map"{
 value = local.flattened_map
 }
+output "nested_map"{
+value = var.nested_map
+}
