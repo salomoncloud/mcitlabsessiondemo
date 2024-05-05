@@ -12,6 +12,11 @@ variable "nested_map" {
   }
 }
 
+variable "winterlistOfSports" {
+  type    = list(string)
+  default = ["hockey", "ski", "skating", "sledge"]
+}
+
 variable "total_output" {
   type    = list(string)
   default = ["150", "150", "150"]
@@ -107,4 +112,8 @@ output "leaders_map" {
 
 output "user_roles_result" {
   value = local.user_role_lookup
+}
+
+output "winter_sports_list" {
+  value = length(var.winterlistOfSports) > 3 ? "winter sports list is extensive" : "winter sports list is limited"
 }
