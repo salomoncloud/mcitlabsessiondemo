@@ -16,6 +16,11 @@ default = ["150", "150", "150"]
 }
 locals{
 number_output = ["724", "238", "219", "291", "555"]
+world_leaders = ["Obama", "Trudeau", "Macron"]
+world_countries = ["US", "CAD", "FRA"]
+world_countries_associated = { for index,world leaders in local.world_leaders:
+world leaders => local.world_countries[index]
+}
   incremented_output = [
     for value in var.total_output : tostring(tonumber(value) + 10)
   ]
@@ -56,4 +61,7 @@ output "incremented_output_show" {
 }
 output "sumoffivenumbers"{
     value=sum([for numberoutput in local.number_output: tonumber(numberoutput)])
+}
+output "world_countries_associated"{
+value = local.world_leaders
 }
