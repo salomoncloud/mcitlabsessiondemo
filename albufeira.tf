@@ -12,3 +12,6 @@ locals{
 output "list_flattened"{
 value = flatten(var.simple_nested_list)
 }
+output "unflattened_list"{
+value=var.simple_nested_list
+}
