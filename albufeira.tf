@@ -25,6 +25,6 @@ value=var.simple_nested_list
 output "flattened_nested_map"{
 value = flatten(var.nested_map)
 }
-local{
+locals{
 flattened_map  = flatten([for k, v in var.nested_map : [for kk, vv in v : { group = k, key = kk, value = vv }]])
 }
