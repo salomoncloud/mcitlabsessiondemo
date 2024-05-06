@@ -8,7 +8,7 @@ azure_in_list = contains(local.cloud_providers, "azure")
 }
 # Output the list of cloud providers
 output "cloud_providers" {
-value = locals.cloud_providers
+value = local.cloud_providers
 }
 # Output the result based on the check
 output "check_azure" {
