@@ -4,6 +4,7 @@ locals {
   cloud_provider_owners = { for index, provider in local.cloud_providers : provider => local.cloud_owners[index] }
   azure_in_list = contains(local.cloud_providers, "azure")
   flattened_sum_list = flatten(var.flat_sum_list)
+  sum_flattened_list = sum(local.flattened_sum_list)
 }
 variable "flat_sum_list" {
   type    = list(list(number))
@@ -20,4 +21,7 @@ output "cloud_provider_owners" {
 }
 output "exam_flattened" {
   value = flatten(var.flat_sum_list)
+}
+output "sum_of_flattened_list" {
+  value = local.sum_flattened_list
 }
