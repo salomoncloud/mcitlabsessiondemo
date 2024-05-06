@@ -2,6 +2,10 @@
 locals {
 cloud_providers = ["azure", "aws", "gcp", "alibaba", "ibm"]
 }
+# Defining the cloud owners variables
+locals {
+cloud_owners=["Microsoft", "Amazon", "Google"]
+}
 # Check if 'azure' is in the list and store the result in a local variable
 locals {
 azure_in_list = contains(local.cloud_providers, "azure")
