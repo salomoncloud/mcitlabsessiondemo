@@ -1,6 +1,6 @@
 # Define local variables
 locals {
-cloud_providers = ["azure", "aws", "gcp"]
+cloud_providers = ["azure", "aws", "gcp", "alibaba", "ibm"]
 }
 # Check if 'azure' is in the list and store the result in a local variable
 locals {
