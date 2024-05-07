@@ -6,8 +6,10 @@ resource "azurerm_resource_group" "salomon_rg" {
   location = var.location_for_azure
 }
 variable "location_for_azure" {
-value = "Canada Central"
+type = string
+default = "Canada Central"
 }
 variable "rg_name" {
-value = "salomon_resource_group"
+type = string
+default = "salomon_resource_group"
 }
