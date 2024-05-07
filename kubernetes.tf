@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "salomon_rg" {
   name     = var.rg_name
   location = var.location_for_azure
 }
-resource "azurerm_resource_grouptwo" "fritz_rg" {
+resource "azurerm_resource_group" "fritz_rg" {
   name     = var.rg_nametwo
   location = var.location_for_azuretwo
 }
