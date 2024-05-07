@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "salomon_rg" {
 }
 variable "location_for_azure" {
 type = string
-default = "Canada Central"
+default = "Canada East"
 }
 variable "rg_name" {
 type = string
