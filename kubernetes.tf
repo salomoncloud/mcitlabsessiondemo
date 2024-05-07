@@ -5,9 +5,9 @@ resource "azurerm_resource_group" "salomon_rg" {
   name     = var.rg_name
   location = var.location_for_azure
 }
-resource "azurerm_resource_group2" "fritz_rg" {
-  name     = var.rg_name2
-  location = var.location_for_azure2
+resource "azurerm_resource_grouptwo" "fritz_rg" {
+  name     = var.rg_nametwo
+  location = var.location_for_azuretwo
 }
 variable "location_for_azure" {
 type = string
@@ -17,11 +17,11 @@ variable "rg_name" {
 type = string
 default = "salomon_resource_group"
 }
-variable "location_for_azure2" {
+variable "location_for_azuretwo" {
 type = string
 default = "West India"
 }
-variable "rg_name2" {
+variable "rg_nametwo" {
 type = string
 default = "fritz_resource_group"
 }
