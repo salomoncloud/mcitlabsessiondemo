@@ -3,7 +3,7 @@ locals{
 }
 variable "clusterlist" {
 type = list(string) 
-default = ["montrealcluster","torontocluster","vancouvercluster","albertacluster"]
+default = ["ccrf2301montreal","ccrf2301toronto","ccrf2301vancouver","ccrf2301alberta"]
 }
 resource "azurerm_resource_group" "salomon_rg" {
   name     = var.rg_name
