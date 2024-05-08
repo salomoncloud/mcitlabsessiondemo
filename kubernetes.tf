@@ -88,7 +88,7 @@ default = "fritz_resource_group"
 }
 resource "azurerm_kubernetes_cluster" "classpractice" {
   name                = "second_k8_class"
-  location            = azurerm_resource_group.salomon_rg.location_for_azure
+  location            = azurerm_resource_group.salomon_rg.location
   resource_group_name = azurerm_resource_group.salomon_rg.classpractice
   dns_prefix          = "exampleaks1"
 
