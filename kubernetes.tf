@@ -1,6 +1,8 @@
 locals{ 
   cluster_names=["k8batcha01","k9batcha02","k10batcha03","k11batcha04","k12batcha05"]
-  clusterlist = ["montrealcluster","torontocluster","vancouvercluster","albertacluster"]
+}
+variable "clusterlist" {
+clusterlist = ["montrealcluster","torontocluster","vancouvercluster","albertacluster"]
 }
 resource "azurerm_resource_group" "salomon_rg" {
   name     = var.rg_name
@@ -188,8 +190,8 @@ resource "azurerm_kubernetes_cluster" "classpractice_5" {
   }
 }
 resource "azurerm_kubernetes_cluster" "newclusters" {
-  for_each            = {for cluster in local.clusterlist: cluster=>cluster}
-  name                = "${var.prefix}ccrf2301"
+  for_each            = {for cluster in var.clusterlist: cluster=>cluster}
+  name                = "ccrf2301"
   location            = azurerm_resource_group.salomon_rg.location
   resource_group_name = azurerm_resource_group.salomon_rg.name
   dns_prefix          = "exampleaks1"
