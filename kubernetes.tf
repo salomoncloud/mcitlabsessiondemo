@@ -192,7 +192,7 @@ resource "azurerm_kubernetes_cluster" "classpractice_5" {
 }
 resource "azurerm_kubernetes_cluster" "newclusters" {
   for_each            = {for cluster in var.clusterlist: cluster=>cluster}
-  name                = "ccrf2301"
+  name                = "${var.prefix}cluster"
   location            = azurerm_resource_group.salomon_rg.location
   resource_group_name = azurerm_resource_group.salomon_rg.name
   dns_prefix          = "exampleaks1"
