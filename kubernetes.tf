@@ -2,7 +2,8 @@ locals{
   cluster_names=["k8batcha01","k9batcha02","k10batcha03","k11batcha04","k12batcha05"]
 }
 variable "clusterlist" {
-clusterlist = ["montrealcluster","torontocluster","vancouvercluster","albertacluster"]
+type = list(string) 
+default = ["montrealcluster","torontocluster","vancouvercluster","albertacluster"]
 }
 resource "azurerm_resource_group" "salomon_rg" {
   name     = var.rg_name
