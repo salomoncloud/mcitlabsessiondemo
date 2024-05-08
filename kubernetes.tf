@@ -86,10 +86,10 @@ variable "rg_nametwo" {
 type = string
 default = "fritz_resource_group"
 }
-resource "azurerm_kubernetes_cluster" "classpractice" {
+resource "azurerm_kubernetes_cluster" "classpractice1" {
   name                = "second_k8_class"
   location            = azurerm_resource_group.salomon_rg.location
-  resource_group_name = azurerm_resource_group.salomon_rg.classpractice
+  resource_group_name = azurerm_resource_group.salomon_rg.name
   dns_prefix          = "exampleaks1"
 
   default_node_pool {
