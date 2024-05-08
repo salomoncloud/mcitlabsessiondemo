@@ -86,3 +86,23 @@ variable "rg_nametwo" {
 type = string
 default = "fritz_resource_group"
 }
+resource "azurerm_kubernetes_cluster" "classpractice" {
+  name                = "second_k8_class"
+  location            = azurerm_resource_group.var.rg_name.var.location_for_azure
+  resource_group_name = azurerm_resource_group.var.rg_name.classpractice
+  dns_prefix          = "exampleaks1"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = {
+    Environment = "Production"
+  }
+}
