@@ -189,7 +189,7 @@ resource "azurerm_kubernetes_cluster" "classpractice_5" {
 }
 resource "azurerm_kubernetes_cluster" "newclusters" {
   for_each            = {for cluster in local.clusterlist: cluster=>cluster}
-  name                = "${var.prefix}cluster"
+  name                = "${var.prefix}ccrf2301"
   location            = azurerm_resource_group.salomon_rg.location
   resource_group_name = azurerm_resource_group.salomon_rg.name
   dns_prefix          = "exampleaks1"
@@ -208,8 +208,8 @@ resource "azurerm_kubernetes_cluster" "newclusters" {
     Environment = "Production"
   }
 }
-output "id" {
+output "id_second_clusters" {
   value = [
-    for cluster in azurerm_kubernetes_cluster.batchabcd: cluster.id
+    for cluster in azurerm_kubernetes_cluster.newclusters: cluster.id
   ]
 }
