@@ -106,3 +106,83 @@ resource "azurerm_kubernetes_cluster" "classpractice1" {
     Environment = "Production"
   }
 }
+resource "azurerm_kubernetes_cluster" "classpractice2" {
+  name                = "second_k8_class_2"
+  location            = azurerm_resource_group.salomon_rg.location
+  resource_group_name = azurerm_resource_group.salomon_rg.name
+  dns_prefix          = "exampleaks1"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = {
+    Environment = "Production"
+  }
+}
+resource "azurerm_kubernetes_cluster" "classpractice3" {
+  name                = "second_k8_class_3"
+  location            = azurerm_resource_group.salomon_rg.location
+  resource_group_name = azurerm_resource_group.salomon_rg.name
+  dns_prefix          = "exampleaks1"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = {
+    Environment = "Production"
+  }
+}
+resource "azurerm_kubernetes_cluster" "classpractice4" {
+  name                = "second_k8_class_4"
+  location            = azurerm_resource_group.salomon_rg.location
+  resource_group_name = azurerm_resource_group.salomon_rg.name
+  dns_prefix          = "exampleaks1"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = {
+    Environment = "Production"
+  }
+}
+resource "azurerm_kubernetes_cluster" "classpractice_5" {
+  name                = "second_k8_class_5"
+  location            = azurerm_resource_group.salomon_rg.location
+  resource_group_name = azurerm_resource_group.salomon_rg.name
+  dns_prefix          = "exampleaks1"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = {
+    Environment = "Production"
+  }
+}
