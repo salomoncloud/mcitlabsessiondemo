@@ -217,5 +217,6 @@ output "id_second_clusters" {
   ]
 }
 variable "mcittt" {
-value = "ccrf2301"
+type = string
+default = "ccrf2301"
 }
