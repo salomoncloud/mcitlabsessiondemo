@@ -192,7 +192,7 @@ resource "azurerm_kubernetes_cluster" "classpractice_5" {
 }
 resource "azurerm_kubernetes_cluster" "newclusters" {
   for_each            = {for cluster in var.clusterlist: cluster=>cluster}
-  name                = var.mcittt
+  name                = "${var.mcittt}cluster"
   location            = azurerm_resource_group.salomon_rg.location
   resource_group_name = azurerm_resource_group.salomon_rg.name
   dns_prefix          = var.dns_cluster
@@ -231,4 +231,16 @@ default = "Standard_D2_v2"
 variable "env" {
 type = string
 default = "production"
+}
+
+resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
+ for_each               = azurerm_kubernetes_cluster.newclusters
+ name                   = "${each.key}"
+ kubernetes_cluster_id  = each.value.id
+ vm_size                = var.vm_size
+ node_count             = 1
+
+  tags = {
+    Environment = var.env
+  }
 }
