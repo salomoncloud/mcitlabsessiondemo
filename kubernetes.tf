@@ -244,41 +244,41 @@ resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
     Environment = var.env
   }
 }
-output "id" {
+output "id_clusters" {
   value = [
     for cluster in azurerm_kubernetes_cluster.newclusters: cluster.id
   ]
 }
  
-output "kube_config" {
+output "kube_config_clusters" {
   sensitive = true
   value = [ 
     for cluster in azurerm_kubernetes_cluster.newclusters: cluster.kube_config_raw
   ]
 }
  
-output "client_key" {
+output "client_key_clusters" {
   sensitive = true
   value = [
     for cluster in azurerm_kubernetes_cluster.newclusters: cluster.kube_config.0.client_key
   ]
 }
  
-output "client_certificate" {
+output "client_certificate_clusters" {
   sensitive = true
   value = [
     for cluster in azurerm_kubernetes_cluster.newclusters: cluster.kube_config.0.client_certificate
   ]
 }
  
-output "cluster_ca_certificate" {
+output "cluster_ca_certificate_clusters" {
   sensitive = true
   value = [
     for cluster in azurerm_kubernetes_cluster.newclusters: cluster.kube_config.0.cluster_ca_certificate
   ]
 }
  
-output "host" {
+output "host_clusters" {
   sensitive = true
   value = [
     for cluster in azurerm_kubernetes_cluster.newclusters: cluster.kube_config.0.host
