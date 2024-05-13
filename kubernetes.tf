@@ -200,9 +200,11 @@ resource "azurerm_kubernetes_cluster" "newclusters" {
 
 variable "name_node" {
 type = string
+default = 
 }
 variable "node_count" {
 type = number
+default = "1"
 }
   identity {
     type = "SystemAssigned"
