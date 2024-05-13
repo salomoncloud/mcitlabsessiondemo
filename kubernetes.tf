@@ -59,15 +59,15 @@ resource "azurerm_resource_group" "fritz_rg" {
 
 resource "azurerm_kubernetes_cluster" "batchabcd" {
   for_each            = {for cluster in local.cluster_names: cluster => cluster}
-  name                = each.key
+  name                = "${var.mcittt}${each.key}"
   location            = azurerm_resource_group.salomon_rg.location
   resource_group_name = azurerm_resource_group.salomon_rg.name
-  dns_prefix          = "exampleaks1"
+  dns_prefix          = var.dns_cluster
 
   default_node_pool {
-    name       = "default"
-    node_count = 1
-    vm_size    = "Standard_D2_v2"
+    name       = var.name_node
+    node_count = var.node_count
+    vm_size    = var.vm_size
   }
 
   identity {
@@ -75,7 +75,7 @@ resource "azurerm_kubernetes_cluster" "batchabcd" {
   }
 
   tags = {
-    Environment = "Production"
+    Environment = var.env
   }
 }
 
@@ -106,7 +106,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
   name                  = "${each.key}"
   kubernetes_cluster_id = each.value.id
   vm_size               = var.vm_size
-  node_count            = 1
+  node_count            = var.node_count
 
   tags = {
     Environment = var.env
