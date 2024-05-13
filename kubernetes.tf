@@ -193,8 +193,8 @@ resource "azurerm_kubernetes_cluster" "newclusters" {
   dns_prefix          = var.dns_cluster
 
   default_node_pool {
-    name       = var.name_node
-    node_count = var.node_count
+    name       = name_node
+    node_count = node_count
     vm_size    = var.vm_size
   }
 
