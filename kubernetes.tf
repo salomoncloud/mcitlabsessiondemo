@@ -2,8 +2,7 @@ locals{
   cluster_names=["k8batcha01","k9batcha02","k10batcha03","k11batcha04","k12batcha05"]
 }
 variable "clusterlist" {
-type = list(string) 
-default = ["ccrf2301mtl","ccrf2301to","ccrf2301van","ccrf2301alb"]
+type = list(string)
 }
 resource "azurerm_resource_group" "salomon_rg" {
   name     = var.rg_name
@@ -76,19 +75,15 @@ output "host" {
 }
 variable "location_for_azure" {
 type = string
-default = "Canada East"
 }
 variable "rg_name" {
 type = string
-default = "salomon_resource_group"
 }
 variable "location_for_azuretwo" {
 type = string
-default = "West India"
 }
 variable "rg_nametwo" {
 type = string
-default = "fritz_resource_group"
 }
 resource "azurerm_kubernetes_cluster" "classpractice1" {
   name                = "second_k8_class"
@@ -205,11 +200,9 @@ resource "azurerm_kubernetes_cluster" "newclusters" {
 
 variable "name_node" {
 type = string
-default = "default"
 }
 variable "node_count" {
 type = number
-default = "1"
 }
   identity {
     type = "SystemAssigned"
@@ -230,15 +223,12 @@ default = "ccrf2301"
 }
 variable "dns_cluster" {
 type = string
-default = "exampleaks1"
 }
 variable "vm_size" {
 type = string
-default = "Standard_D2_v2"
 }
 variable "env" {
 type = string
-default = "production"
 }
 
 resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
